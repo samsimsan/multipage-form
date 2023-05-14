@@ -1,5 +1,4 @@
 import React from "react";
-import NavigationPage from "../NavigationPane/NavigationPage";
 import PersonalInfo from "./PersonalInfo";
 import Button from "../Button";
 

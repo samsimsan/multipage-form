@@ -32,12 +32,13 @@ body {
 
 .mainBox {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 16rem 3fr;
     column-gap: 3rem;
     height: 75svh;
     padding: 1rem;
     background-color: var(--Alabaster);
     border-radius: 10px;
+    box-shadow: 0 10px 10px 1px var(--Lightgray);
 }
 
 /* --------------------------------------------------------------------- */
@@ -45,6 +46,8 @@ body {
 .navigationPane {
     padding: 2rem;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="274" height="568" fill="none" viewBox="0 0 274 568"><rect width="274" height="568" fill="%23483EFF" rx="10"/><mask id="a" width="274" height="568" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><rect width="274" height="568" fill="%23fff" rx="10"/></mask><g mask="url(%23a)"><path fill="%236259FF" fill-rule="evenodd" d="M-34.692 543.101C3.247 632.538 168.767 685.017 211.96 612.52c43.194-72.497-66.099-85.653-104.735-160.569-38.635-74.916-68.657-121.674-124.482-104.607-55.824 17.068-55.375 106.32-17.436 195.757Z" clip-rule="evenodd"/><path fill="%23F9818E" fill-rule="evenodd" d="M233.095 601.153c60.679-28.278 92.839-143.526 41.875-171.528-50.965-28.003-57.397 47.579-108.059 75.987-50.662 28.408-82.14 50.207-69.044 88.241 13.096 38.034 74.549 35.578 135.228 7.3Z" clip-rule="evenodd"/><path stroke="%23fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5" d="m165.305 469.097 10.607-10.806M209.461 474.581l-12.506-10.503M187.56 488.991l-6.908 14.798"/><path fill="%23FFAF7E" d="M.305 546.891c37.003 0 67-29.997 67-67s-29.997-67-67-67-67 29.997-67 67 29.997 67 67 67Z"/></g></svg>');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 10px;
     color: var(--White);
     text-transform: uppercase;
@@ -82,4 +85,50 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------- */
+/* Pages */
+
+.pages {
+    position: relative;
+    margin-block: 2.5rem 0;
+    padding-inline: 3rem 6rem;
+}
+
+.p1subHeading {
+    padding-block: 1rem 2rem;
+    color: var(--Coolgray);
+}
+
+.personelInfoForm {
+    display: grid;
+}
+
+input {
+    padding-inline: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 2.5rem;
+    border-radius: 6px;
+    margin-block: 0.5rem 1.5rem;
+    outline: 2px solid var(--Lightgray);
+    transition: 0.25s;
+}
+
+input:focus-visible {
+    outline: 2px solid var(--Coolgray);
+}
+
+.submit {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: absolute;
+    background-color: hsl(213.62deg 71.6% 31.76%);
+    color: hsl(180deg 100% 96.08%);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    right: 6rem;
+    bottom: 1rem;
 }
