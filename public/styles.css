@@ -31,10 +31,12 @@ body {
 }
 
 .mainBox {
+    position: relative;
     display: grid;
     grid-template-columns: 16rem 3fr;
     column-gap: 3rem;
     height: 75svh;
+    width: 56rem;
     padding: 1rem;
     background-color: var(--Alabaster);
     border-radius: 10px;
@@ -91,7 +93,6 @@ body {
 /* Pages */
 
 .pages {
-    position: relative;
     margin-block: 2.5rem 0;
     padding-inline: 3rem 6rem;
 }
@@ -129,6 +130,6 @@ input:focus-visible {
     width: 7rem;
     height: 2.5rem;
     border-radius: 4px;
-    right: 6rem;
-    bottom: 1rem;
+    right: 7rem;
+    bottom: 2rem;
 }

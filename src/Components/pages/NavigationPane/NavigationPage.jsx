@@ -3,9 +3,6 @@ import ListItem from "./ListItem";
 
 
 export default function NavigationPage(props) {
-
-
-
     return <div className="navigationPane">
         <ListItem step='1' pageNum={props.pageNum} title='your info' />
         <ListItem step='2' pageNum={props.pageNum} title='select plan' />
