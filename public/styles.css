@@ -43,6 +43,42 @@ body {
     box-shadow: 0 10px 10px 1px var(--Lightgray);
 }
 
+/* button styles */
+.submit {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: absolute;
+    background-color: var(--Marineblue);
+    color: hsl(180deg 100% 96.08%);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    right: 7rem;
+    bottom: 2rem;
+    transition: 0.25s;
+}
+
+.submit:hover {
+    background-color: hsl(213.62deg 71.6% 31.76%);
+}
+
+.GoBack {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: absolute;
+    background-color: transparent;
+    color: var(--Coolgray);
+    height: 2.5rem;
+    border-radius: 4px;
+    right: 31rem;
+    bottom: 2rem;
+    transition: 0.25s;
+}
+
+.GoBack:hover {
+    color: var(--Marineblue);
+}
+
 /* --------------------------------------------------------------------- */
 /* navigation pane  */
 .navigationPane {
@@ -121,15 +157,3 @@ input:focus-visible {
     outline: 2px solid var(--Coolgray);
 }
 
-.submit {
-    font-weight: 500;
-    font-size: 0.95rem;
-    position: absolute;
-    background-color: hsl(213.62deg 71.6% 31.76%);
-    color: hsl(180deg 100% 96.08%);
-    width: 7rem;
-    height: 2.5rem;
-    border-radius: 4px;
-    right: 7rem;
-    bottom: 2rem;
-}
