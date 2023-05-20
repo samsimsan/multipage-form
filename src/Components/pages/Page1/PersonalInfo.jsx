@@ -10,7 +10,7 @@ export default function PersonalInfo() {
             <label for="email">Email Address</label>
             <input id="email" type="email" name="email" />
             <label for="phone">Phone Number</label>
-            <input id="phone" type="number" name="phone" />
+            <input id="phone" type="number" name="phone" required/>
         </form>
     );
 }

@@ -5,7 +5,7 @@ import PageHeading from "../../PageHeading";
 export default function Page3(props) {
     return (
         <div className="page1 pages">
-            <PageHeading heading="Select you plan" para="You have the option of monthly or yearly billing." />
+            <PageHeading heading="Pick add-ons" para="Add-ons help enhance your gaming experience." />
         </div>
     );
 }
