@@ -17,7 +17,7 @@ export default function App() {
         if (currPage !== 5) {
             return (
                 <div className='buttonholder'>
-                    <Button1 Clicked={updatePageNumber} pageNum={currPage} incOrDec={1} class={currPage === 4 ? "submit purple" : "submit"} text={currPage === 4 ? "Confirm" : "Next Step"} />
+                    <Button1 type="submit" form="my-form" Clicked={updatePageNumber} pageNum={currPage} incOrDec={1} class={currPage === 4 ? "submit purple" : "submit"} text={currPage === 4 ? "Confirm" : "Next Step"} />
                     {currPage === 1 ? "" : <Button1 Clicked={updatePageNumber} pageNum={currPage} class="GoBack" incOrDec={-1} text="Go Back" />}
                 </div>
             )
