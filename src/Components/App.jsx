@@ -32,10 +32,16 @@ export default function App() {
         // console.log(value);
     }
 
+    function tester(data) {
+        // console.log("top level :"+data)
+        const {username, email, phone} = data;
+        console.log(username);
+    }
+
     function displayPage() {
         switch (currPage) {
             case 1:
-                return <Page1 />;
+                return <Page1 test={tester}/>;
             case 2:
                 return <Page2 />
             case 3:

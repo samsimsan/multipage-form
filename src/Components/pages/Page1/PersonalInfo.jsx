@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeading from "../../PageHeading";
 
-export default function PersonalInfo() {
+export default function PersonalInfo(props) {
+    const [formData, SetFormData] = useState(
+        {
+            username: "",
+            email: "",
+            phone: ""
+        }
+    )
 
     function buttonClicked(event) {
-        console.log("worked");
 
+        const formvalues = event.target;
+        const name = formvalues.name;
+        const value= formvalues.value;
+
+        SetFormData(preVals =>{
+            return {
+                ...preVals,
+                [name]:value 
+            }
+        })
+        // console.log("form :"+formData.username);
+        props.test1(formData)
         event.preventDefault();
     }
 
 
     return (
-        <form id="my-form" className="personelInfoForm" onSubmit={buttonClicked}>
+        <form id="my-form" className="personelInfoForm" onChange={buttonClicked}>
             <PageHeading heading="Personal Info" para="Please provide you name, email address and Phone number." />
             <label for="username">Name</label>
-            <input id="username" type="text" name="username" />
+            <input id="username" type="text" name="username" value={formData.username}/>
             <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" />
+            <input id="email" type="email" name="email" value={formData.email}/>
             <label for="phone">Phone Number</label>
-            <input id="phone" type="number" name="phone" required />
+            <input id="phone" type="number" name="phone" required value={formData.phone}/>
         </form>
-        
+
     );
 }
