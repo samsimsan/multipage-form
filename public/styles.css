@@ -2,7 +2,7 @@
     /* Primary */
     --Marineblue: hsl(213, 96%, 18%);
     --Purplishblue: hsl(243, 100%, 62%);
-    --Pastelblue: hsl(228, 100%, 84%);
+    --Pastelblue: hsl(243.68deg 98.28% 77.25%);
     --Lightblue: hsl(206, 94%, 87%);
     --Strawberryred: hsl(354, 84%, 57%);
 
@@ -44,6 +44,21 @@ body {
 }
 
 /* button styles */
+
+.buttonholder {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+}
+
+.purple {
+    background-color: var(--Purplishblue) !important;
+}
+
+.purple:hover {
+    background-color: var(--Pastelblue) !important;
+}
+
 .submit {
     font-weight: 500;
     font-size: 0.95rem;
@@ -69,6 +84,7 @@ body {
     background-color: transparent;
     color: var(--Coolgray);
     height: 2.5rem;
+    width: 4rem;
     border-radius: 4px;
     right: 31rem;
     bottom: 2rem;
@@ -188,5 +204,31 @@ input:focus-visible {
 }
 
 .cards p{
+    color: var(--Coolgray);
+}
+
+
+/* --------------------------------------------------------------------- */
+/* Page5 */
+
+.page5 {
+    display: grid;
+    place-content: center center;
+    gap: 1rem;
+    text-align: center;
+    justify-items: center;
+    padding-inline: 5rem;
+}
+
+.page5 img {
+    margin-bottom: 1rem;
+}
+
+.page5 h2 {
+    color: var(--Marineblue);
+}
+
+.page5 p {
+    line-height: 1.5;
     color: var(--Coolgray);
 }

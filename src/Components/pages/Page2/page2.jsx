@@ -7,7 +7,7 @@ import pro from "../../../images/icon-pro.svg"
 
 export default function Page2(props) {
     return (
-        <div className="page1 pages">
+        <div className="pages">
             <PageHeading heading="Select you plan" para="You have the option of monthly or yearly billing." />
             <div className="cardsContainer">
                 <Card money="$9/mo" logo={arcade} heading="Arcade" />

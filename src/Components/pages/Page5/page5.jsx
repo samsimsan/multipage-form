@@ -1,11 +1,15 @@
 import React from "react";
-import PageHeading from "../../PageHeading";
+import thankyou from "../../../images/icon-thank-you.svg"
 
 
 export default function Page5(props) {
     return (
-        <div className="page1 pages">
-            <PageHeading heading="Select you plan" para="You have the option of monthly or yearly billing." />
+        <div className=" page5">
+            <img src={thankyou} />
+            <h2>Thank you</h2>
+            <p>Thanks for confirming your subscription! we hope you have
+                fun using our platform. if you ever need support. Please feel
+                free to email us at support@loremgaming.com.</p>
         </div>
     );
 }

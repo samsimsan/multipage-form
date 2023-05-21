@@ -11,14 +11,13 @@ import Button1 from './Buttons/Button1';
 export default function App() {
 
     const [currPage, setCurrPage] = useState(1);
-    const [buttonClass, setButtonClass] = useState("submit")
-    const [buttonText, setButtonText] = useState("Next Step")
-
+    
     function showButtons() {
+
         if (currPage !== 5) {
             return (
-                <div>
-                    <Button1 Clicked={updatePageNumber} pageNum={currPage} incOrDec={1} class={buttonClass} text={buttonText} />
+                <div className='buttonholder'>
+                    <Button1 Clicked={updatePageNumber} pageNum={currPage} incOrDec={1} class={currPage === 4 ? "submit purple" : "submit"} text={currPage === 4 ? "Confirm" : "Next Step"} />
                     {currPage === 1 ? "" : <Button1 Clicked={updatePageNumber} pageNum={currPage} class="GoBack" incOrDec={-1} text="Go Back" />}
                 </div>
             )
@@ -51,7 +50,7 @@ export default function App() {
     }
 
     return <div className='mainBox'>
-        <NavigationPage pageNum={currPage.toString()} />
+        <NavigationPage pageNum={currPage !== 5 ? currPage.toString() : "5"} />
         {displayPage()}
         {showButtons()}
     </div>
