@@ -8,10 +8,12 @@ import NavigationPage from './pages/NavigationPane/NavigationPage';
 import Button1 from './Buttons/Button1';
 
 
+
 export default function App() {
 
     const [currPage, setCurrPage] = useState(1);
-    
+    const [fullData, setFullData] = useState({});
+
     function showButtons() {
 
         if (currPage !== 5) {
@@ -34,14 +36,22 @@ export default function App() {
 
     function tester(data) {
         // console.log("top level :"+data)
-        const {username, email, phone} = data;
-        console.log(username);
+        const { username, email, phone } = data;
+        setFullData(prevals => {
+            return {
+                ...prevals,
+                userName: username,
+                email: email,
+                phone: phone
+            }
+
+        })
     }
 
     function displayPage() {
         switch (currPage) {
             case 1:
-                return <Page1 test={tester}/>;
+                return <Page1 test={tester} />;
             case 2:
                 return <Page2 />
             case 3:
@@ -55,10 +65,12 @@ export default function App() {
         }
     }
 
-    return <div className='mainBox'>
-        <NavigationPage pageNum={currPage !== 5 ? currPage.toString() : "5"} />
-        {displayPage()}
-        {showButtons()}
-    </div>
+    return (
+        <div className='mainBox'>
+            <NavigationPage pageNum={currPage !== 5 ? currPage.toString() : "5"} />
+            {displayPage()}
+            {showButtons()}
+        </div>
+    );
 
 }

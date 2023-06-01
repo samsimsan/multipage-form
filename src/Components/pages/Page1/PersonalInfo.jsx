@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 import PageHeading from "../../PageHeading";
 
-export default function PersonalInfo(props) {
+
+export default function PersonalInfo({ test1 }) {
+
     const [formData, SetFormData] = useState(
         {
             username: "",
@@ -11,31 +13,32 @@ export default function PersonalInfo(props) {
     )
 
     function buttonClicked(event) {
+    const formvalues = event.target;
+    const name = formvalues.name;
+    const value = formvalues.value;
 
-        const formvalues = event.target;
-        const name = formvalues.name;
-        const value= formvalues.value;
+    SetFormData(prevVals => {
+      return {
+        ...prevVals,
+        [name]: value
+      };
+    });
+    event.preventDefault();
+  }
 
-        SetFormData(preVals =>{
-            return {
-                ...preVals,
-                [name]:value 
-            }
-        })
-        // console.log("form :"+formData.username);
-        props.test1(formData)
-        event.preventDefault();
-    }
+  useEffect(() => {
+    test1(formData);
+  }, [formData]);
 
 
     return (
         <form id="my-form" className="personelInfoForm" onChange={buttonClicked}>
             <PageHeading heading="Personal Info" para="Please provide you name, email address and Phone number." />
-            <label for="username">Name</label>
+            <label htmlFor="username">Name</label>
             <input id="username" type="text" name="username" value={formData.username}/>
-            <label for="email">Email Address</label>
+            <label htmlFor="email">Email Address</label>
             <input id="email" type="email" name="email" value={formData.email}/>
-            <label for="phone">Phone Number</label>
+            <label htmlFor="phone">Phone Number</label>
             <input id="phone" type="number" name="phone" required value={formData.phone}/>
         </form>
 
