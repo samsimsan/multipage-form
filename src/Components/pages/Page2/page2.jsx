@@ -4,6 +4,7 @@ import Card from "./card";
 import arcade from "../../../images/icon-arcade.svg"
 import advanced from "../../../images/icon-advanced.svg"
 import pro from "../../../images/icon-pro.svg"
+import CheckedButton from "../../Buttons/CheckedButton"
 
 export default function Page2(props) {
     return (
@@ -14,6 +15,7 @@ export default function Page2(props) {
                 <Card money="$12/mo" logo={advanced} heading="advanced" />
                 <Card money="$15/mo" logo={pro} heading="pro" />
             </div>
+            <CheckedButton />
         </div>
     );
 }
